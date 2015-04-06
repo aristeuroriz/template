@@ -1,0 +1,41 @@
+<script type="text/javascript">
+$(document).on("ready page:change", function() {
+	$('.tag-tooltip').tooltip();
+});
+</script>
+<% if user_signed_in? %>
+
+
+<ul class="nav navbar-nav">
+	<li><%= link_to('Home', root_path, :method=> 'get', :class=> 'fonte-menu')%></li>
+	<li><%= link_to('Item1', '#' , :class=> 'fonte-menu')%></li> 
+	<li><%= link_to('Item2', '#', :class=> 'fonte-menu' )%></li>  
+</ul>
+
+<ul class="nav navbar-nav pull-right">
+	<li><%=link_to(current_user.email, edit_user_registration_path, :style=>'font-size:100%;',:method=> 'get')%></li>
+	
+	<li><%= link_to((fa_icon "sign-out"), destroy_user_session_path, :method=>'delete', :class=> "tag-tooltip fa-2x",
+		:data => {:toggle=>"tooltip"},
+		'data-original-title' => "Sair",
+		'data-placement' => 'bottom') %>   </li>     
+	</ul>
+
+	<% else %>
+
+
+	<ul class="nav navbar-nav">
+		<li><%= link_to('Home', root_path , :class=> 'fonte-menu')%> </li>
+		<li><%= link_to('Blog', root_path , :class=> 'fonte-menu')%></li> 
+	</ul>
+
+	<ul class="nav navbar-nav pull-right">
+
+		<li><%= link_to('Cadastrar conta', new_user_registration_path, :method=> 'get' , :class=> 'fonte-menu')%> </li>
+
+		<li><%= link_to( "Entrar" ,  new_user_session_path, :class=> "fonte-menu" )%>  </li>
+	</ul>
+
+	<% end %>
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<%= viewport_meta_tag(:maximum_scale => "1.0") %>
+
+	<%= metamagic site: "Template", title: [:site, :title, ], separator: " — ",
+	keywords:['','','','','','','','','',''],
+	description: "",
+	author: "https://www.linkedin.com/in/aristeuroriz",
+	canonical: ""
+	%>
+
+	
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= include_gon %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="wrap">
+
+		<header>	
+			<nav class="navbar-inverse navbar-fixed-top" role="navigation" id="menu">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bar" style="margin-top: 4%;">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Arneti Themes</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bar">
+
+					<div class="container">
+						<%= render "layouts/navigation" %>
+					</div>
+
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</header>
+		
+
+		<div id="main" role="main">
+
+			<div class="container">
+				<div class="content principal">
+					<div class="row-fluid">
+					
+
+						<%= bootstrap_flash %> 
+
+						<%= yield %>
+
+
+					</div>
+
+					<br>
+					<br>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<div id="footer">
+		<%= render 'layouts/footer' %>
+	</div>
+ 
+</body>
+</html>

@@ -1,0 +1,55 @@
+<div class="conteiner">
+	<div class="row">
+
+		<div class="col-md-4">
+
+
+		</div>
+
+		<div class="col-md-4" id="p2"> 
+
+			<br>
+
+
+			<%= link_to (image_tag "google-256.png",class: "social-icon" ), 'http://musclesys.com.br',  :target => "_blank"%> 
+			<%= link_to (image_tag "facebook-256.png",class: "social-icon"), 'https://www.facebook.com/pages/MuscleSys/1019521451407294',  :target => "_blank" %> 
+			<%= link_to (image_tag "twitter-256.png",class: "social-icon"), 'https://twitter.com/Muscle_Sys',  :target => "_blank" %> 
+
+			<%= link_to (image_tag "email-256.png",class: "social-icon"), '#contato',:data => { :toggle =>"modal" } %>
+
+			<h6>© 2014 MuscleSys. Todos os direitos reservados. <br> Desenvolvido por  <%= link_to('Arneti Tecnologia', 'http://arneti.com.br', :target => '_blank', class: "arneti"  )%> </h6>
+
+			<h6>Brasil / Goiás</h6>
+			<%=image_tag "brasil_goias.jpg", class: "band" %>
+
+
+		</div>
+
+		<div class="col-md-4">
+
+
+
+		</div>
+	</div>
+
+	<div id="contato" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contatoLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="contatoLabel">Gostaríamos muito de ouvir de você</h3>
+				</div>
+				<div class="modal-body">
+					
+					
+
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
